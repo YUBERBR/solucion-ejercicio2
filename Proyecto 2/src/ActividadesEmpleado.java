@@ -1,13 +1,13 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
-import java.util.Scanner;
+
 public class ActividadesEmpleado {
 
 	private static final List<Empleado> listaEmpleados = new ArrayList<>();
-	
 	
 	public static void inicializarLista() {
 		
@@ -20,15 +20,21 @@ public class ActividadesEmpleado {
 		listaEmpleados.add(new Empleado("Wilson", "Bernal Galvis",12356786,900000));
 	}
 	public static void agregarEmpleado() {
+		//Scanner teclado = new Scanner(System.in); 
+		//double Empleado = 0;
 		System.out.println("Agregar empleado");
-		
+		 //Empleado = teclado.nextDouble();
+		//listaEmpleados.addAll(listaEmpleados);
 	}
 	public static void eliminarEmpleado() {
 		System.out.println("Eliminar empleado");
+		listaEmpleados.remove("Yuber");
 	}
 	public static void mostrarEmpleado() {
-		System.out.println("Mostrar empleados");
-		
+		System.out.println("Mostrar empleados"+listaEmpleados.size());
+			listaEmpleados.forEach(empleado->
+				System.out.println(empleado));				
+			
 	}
 	public static void actualizarEmpleado() {
 		System.out.println("Actulizar empleados");
@@ -66,6 +72,7 @@ public class ActividadesEmpleado {
 	}
 	public static void mejoresSalarios() {
 		System.out.println("Los 5 Empleados con mejor salario son:");
+		
 	}
 }
 
